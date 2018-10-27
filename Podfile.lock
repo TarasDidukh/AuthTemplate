@@ -1,28 +1,39 @@
 PODS:
   - Alamofire (4.7.3)
-  - ReactiveCocoa (8.0.0):
+  - Kingfisher (4.9.0)
+  - ReactiveCocoa (8.0.2):
     - ReactiveSwift (~> 4.0)
   - ReactiveSwift (4.0.0):
     - Result (~> 4.0)
+  - Realm (3.11.1):
+    - Realm/Headers (= 3.11.1)
+  - Realm/Headers (3.11.1)
+  - RealmSwift (3.11.1):
+    - Realm (= 3.11.1)
   - Result (4.0.0)
   - Swinject (2.5.0)
-  - SwinjectStoryboard (2.0.2):
-    - Swinject (~> 2.4)
+  - SwinjectStoryboard (2.1.0):
+    - Swinject (~> 2.5)
 
 DEPENDENCIES:
   - Alamofire
+  - Kingfisher (~> 4.9.0)
   - ReactiveCocoa
+  - RealmSwift
   - Swinject
   - SwinjectStoryboard
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
-  ReactiveCocoa: 87cb64d78424d749a0bbfd9b07e4825e8d834066
+  Kingfisher: 64539b51826b778206daa6ed815d12653caa69dd
+  ReactiveCocoa: fbd26e9ba60e98417ee47433e59465a98ed9da0f
   ReactiveSwift: a2bb9ace428a109e9c0209615645d9d286c8c433
+  Realm: 037c5919b9ceb59d6beed5d3b031096856b119b3
+  RealmSwift: c9580133e73ef40ed340401af2dbc9a5790dfea7
   Result: 7645bb3f50c2ce726dd0ff2fa7b6f42bbe6c3713
   Swinject: 82cdb851f63f91bba974e3eca1d69780f2f7677e
-  SwinjectStoryboard: 365698aec11b57c6b14a3c1f52d0308759d377bf
+  SwinjectStoryboard: 688f096033103e66ffcf6ca678211acd7d7be505
 
-PODFILE CHECKSUM: 4ddac265264a56617f3ba840b09f9375e4c30bcb
+PODFILE CHECKSUM: 7b264e69f9125b6f181090cf51acdfe41b3b1391
 
 COCOAPODS: 1.4.0

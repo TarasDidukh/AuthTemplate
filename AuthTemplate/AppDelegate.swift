@@ -7,15 +7,48 @@
 //
 
 import UIKit
+import SwinjectStoryboard
+import Swinject
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var container: Container = {
+        let container = Container()
+        container.storyboardInitCompleted(SigninController.self) { r, c in
+            c.profileService = r.resolve(ProfileServicing.self)
+            c.authService = r.resolve(AuthServicing.self)
+        }
+        container.storyboardInitCompleted(ProfileController.self){ r, c in
+            c.authService = r.resolve(AuthServicing.self)
+        }
+        container.register(Networking.self) { _ in Network() }
+        container.register(StorageRepositoring.self) { _ in RealmRepository() }
+        container.register(ProfileServicing.self) { r in
+            ProfileService(network: r.resolve(Networking.self)!, storage: r.resolve(StorageRepositoring.self)!)
+        }
+        
+        container.register(AuthServicing.self) { r in
+            AuthService(storage: r.resolve(StorageRepositoring.self)!)
+        }
+        
+        return container
+    }()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        let storyboard = SwinjectStoryboard.create(name: "Main", bundle: nil, container: container)
+        var vc: UIViewController?
+        if let user = container.resolve(AuthServicing.self)!.checkAuthentication()  {
+                vc = storyboard.instantiateViewController(withIdentifier: "ProfileController")
+                (vc as! ProfileController).user = user
+        } else {
+            vc = storyboard.instantiateViewController(withIdentifier: "SigninController")
+        }
+        let navigationController = UINavigationController(rootViewController: vc!)
+        self.window?.rootViewController = navigationController
+        self.window?.makeKeyAndVisible()
+        
         return true
     }
 

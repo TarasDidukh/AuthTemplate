@@ -10,4 +10,6 @@ target 'AuthTemplate' do
   pod 'SwinjectStoryboard'
   pod 'Alamofire'
   pod 'ReactiveCocoa'
+	pod 'Kingfisher', '~> 4.9.0'
+pod 'RealmSwift' 
 end

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1000"
+   LastUpgradeVersion = "0930"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "BFBD9E2387C32AC707DD201DEEE1F5AE"
+               BlueprintIdentifier = "5CC6A3BF2828AD404BF71BDD84C1F2F4"
                BuildableName = "Pods_AuthTemplate.framework"
                BlueprintName = "Pods-AuthTemplate"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "BFBD9E2387C32AC707DD201DEEE1F5AE"
+            BlueprintIdentifier = "5CC6A3BF2828AD404BF71BDD84C1F2F4"
             BuildableName = "Pods_AuthTemplate.framework"
             BlueprintName = "Pods-AuthTemplate"
             ReferencedContainer = "container:Pods.xcodeproj">
