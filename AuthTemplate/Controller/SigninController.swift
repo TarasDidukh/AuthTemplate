@@ -15,12 +15,14 @@ class SigninController: UIViewController, UITextFieldDelegate {
     let PasswordMinSymbols = 4
     var errorLabelHeight: CGFloat?
     @IBOutlet weak var viewPhoneContainer: UIView!
+    @IBOutlet weak var phonePlaceholder: UILabel!
     @IBOutlet weak var fieldPhone: UITextField!
     @IBOutlet weak var fieldPassword: UITextField!
     @IBOutlet weak var labelError: UILabel!
     @IBOutlet weak var buttonSubmit: UIButton!
     @IBOutlet var cnstrSocialsBottom: NSLayoutConstraint!
     @IBOutlet weak var cnstrErrorHeight: NSLayoutConstraint!
+    @IBOutlet weak var viewSeparator: UIView!
     
     public var profileService: ProfileServicing?
     public var authService: AuthServicing?
@@ -38,10 +40,17 @@ class SigninController: UIViewController, UITextFieldDelegate {
         viewPhoneContainer.layer.masksToBounds = true
         fieldPassword.setLeftPaddingPoints(10)
         
+        phonePlaceholder.textColor = AppColors.PictonBlue
+        viewPhoneContainer.backgroundColor = AppColors.Tundora
+        fieldPhone.backgroundColor = AppColors.Tundora
+        fieldPassword.backgroundColor = AppColors.Tundora
+        labelError.textColor = AppColors.Claret
+        viewSeparator.backgroundColor = AppColors.Boulder
+        
         fieldPassword.attributedPlaceholder = NSAttributedString(string: "Пароль",
-                           attributes: [NSAttributedStringKey.foregroundColor: UIColor(named: "Boulder")])
+                           attributes: [NSAttributedStringKey.foregroundColor: AppColors.Boulder])
         fieldPhone.attributedPlaceholder = NSAttributedString(string: "Номер телефона",
-                                                                 attributes: [NSAttributedStringKey.foregroundColor: UIColor(named: "Boulder")])
+                                                                 attributes: [NSAttributedStringKey.foregroundColor: AppColors.Boulder])
         errorLabelHeight = cnstrErrorHeight.constant
         switchError(show: false)
         
@@ -141,15 +150,15 @@ class SigninController: UIViewController, UITextFieldDelegate {
         }
         if isActive {
             buttonSubmit.layer.borderWidth = 0
-            buttonSubmit.backgroundColor = UIColor(named: "PictonBlue")
+            buttonSubmit.backgroundColor = AppColors.PictonBlue
             buttonSubmit.setTitleColor(UIColor.white, for: .normal)
             buttonSubmit.isEnabled = true
         } else {
             buttonSubmit.layer.borderWidth = 1
             buttonSubmit.isEnabled = false
-            buttonSubmit.layer.borderColor = UIColor(named: "Boulder")?.cgColor
-            buttonSubmit.setTitleColor(UIColor(named: "Boulder"), for: .normal)
-            buttonSubmit.backgroundColor = UIColor(named: "MineShaft")
+            buttonSubmit.layer.borderColor = AppColors.Boulder.cgColor
+            buttonSubmit.setTitleColor(AppColors.Boulder, for: .normal)
+            buttonSubmit.backgroundColor = AppColors.MineShaft
         }
     }
 }

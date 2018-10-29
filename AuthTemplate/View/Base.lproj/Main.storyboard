@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -54,7 +53,6 @@
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hkH-F3-fLd">
                                 <rect key="frame" x="0.0" y="459" width="375" height="1"/>
-                                <color key="backgroundColor" name="Boulder"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="mzm-LD-Syh"/>
                                 </constraints>
@@ -122,12 +120,12 @@
                                     <constraint firstAttribute="height" constant="37" id="uPF-NA-sp2"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
-                                <color key="textColor" name="Claret"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.23470052080000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K5e-bB-MC3">
                                 <rect key="frame" x="16" y="242" width="343" height="40"/>
-                                <color key="backgroundColor" name="Tundora"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="HTT-U6-fBd"/>
                                 </constraints>
@@ -145,12 +143,12 @@
                                             <constraint firstAttribute="height" constant="19" id="Y5t-hc-17L"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
-                                        <color key="textColor" name="PictonBlue"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uoF-cL-iIw">
                                         <rect key="frame" x="80" y="10" width="1" height="20"/>
-                                        <color key="backgroundColor" name="Boulder"/>
+                                        <color key="backgroundColor" red="0.4823529411764706" green="0.4823529411764706" blue="0.4823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="1" id="qOf-b3-qFs"/>
                                             <constraint firstAttribute="height" constant="20" id="you-gt-9XW"/>
@@ -158,13 +156,13 @@
                                     </view>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Номер телефона" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="dd3-1e-CTS">
                                         <rect key="frame" x="101" y="0.0" width="242" height="40"/>
-                                        <color key="backgroundColor" name="Tundora"/>
+                                        <color key="backgroundColor" red="0.35294117650000001" green="0.35294117650000001" blue="0.35294117650000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                 </subviews>
-                                <color key="backgroundColor" name="Tundora"/>
+                                <color key="backgroundColor" red="0.35294117650000001" green="0.35294117650000001" blue="0.35294117650000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="wnk-Na-onI" firstAttribute="centerY" secondItem="Haz-qG-Poc" secondAttribute="centerY" id="6Nd-OY-7vf"/>
                                     <constraint firstItem="uoF-cL-iIw" firstAttribute="leading" secondItem="wnk-Na-onI" secondAttribute="trailing" constant="18" id="B4Z-Be-A7W"/>
@@ -191,8 +189,8 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" name="MineShaft"/>
-                        <color key="tintColor" name="Blue"/>
+                        <color key="backgroundColor" red="0.17254901959999999" green="0.17254901959999999" blue="0.17254901959999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="fs9-yW-v37" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1zW-MT-mPe"/>
                             <constraint firstItem="hkH-F3-fLd" firstAttribute="top" secondItem="mha-oQ-33W" secondAttribute="bottom" constant="31" id="4Pl-R1-emf"/>
@@ -231,7 +229,9 @@
                         <outlet property="fieldPassword" destination="K5e-bB-MC3" id="Vb6-RG-j04"/>
                         <outlet property="fieldPhone" destination="dd3-1e-CTS" id="zFe-r9-END"/>
                         <outlet property="labelError" destination="O8m-aA-Zte" id="ov6-3n-Iad"/>
+                        <outlet property="phonePlaceholder" destination="wnk-Na-onI" id="zpE-G9-bD3"/>
                         <outlet property="viewPhoneContainer" destination="Haz-qG-Poc" id="Vs6-S6-yyO"/>
+                        <outlet property="viewSeparator" destination="hkH-F3-fLd" id="rfZ-5Z-mTV"/>
                         <segue destination="EHP-Qh-DBr" kind="show" identifier="showProfile" id="tbu-MO-Uc9"/>
                     </connections>
                 </viewController>
@@ -266,7 +266,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" name="MineShaft"/>
+                        <color key="backgroundColor" red="0.17254901960784313" green="0.17254901960784313" blue="0.17254901960784313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="m2j-7u-CtT" firstAttribute="centerX" secondItem="6Rx-gx-dOr" secondAttribute="centerX" id="7zl-wN-WRd"/>
                             <constraint firstItem="mz0-0C-AoN" firstAttribute="trailing" secondItem="DDu-cu-gmh" secondAttribute="trailing" constant="16" id="bd0-iH-Wgi"/>
@@ -304,7 +304,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" name="MineShaft"/>
+                        <color key="backgroundColor" red="0.17254901959999999" green="0.17254901959999999" blue="0.17254901959999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="7V9-lK-jM9" firstAttribute="top" secondItem="czu-k3-MKq" secondAttribute="top" constant="41" id="3eN-Ut-I4Z"/>
                             <constraint firstItem="7V9-lK-jM9" firstAttribute="centerX" secondItem="ENj-81-ZjA" secondAttribute="centerX" id="LCZ-Jd-Jed"/>
@@ -334,7 +334,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" name="MineShaft"/>
+                        <color key="backgroundColor" red="0.17254901959999999" green="0.17254901959999999" blue="0.17254901959999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="si3-s7-EnE" firstAttribute="centerX" secondItem="kgM-40-HrD" secondAttribute="centerX" id="5Kx-8F-hWX"/>
                             <constraint firstItem="si3-s7-EnE" firstAttribute="top" secondItem="AIL-0B-21I" secondAttribute="top" constant="41" id="x8d-6X-XAT"/>
@@ -369,26 +369,9 @@
         <image name="facebookLogo" width="45.599998474121094" height="45.599998474121094"/>
         <image name="twitterLogo" width="45.599998474121094" height="45.599998474121094"/>
         <image name="vkLogo" width="45.599998474121094" height="45.599998474121094"/>
-        <namedColor name="Blue">
-            <color red="0.21799999475479126" green="0.14100000262260437" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="Boulder">
-            <color red="0.4823529411764706" green="0.4823529411764706" blue="0.4823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="Claret">
-            <color red="0.52941176470588236" green="0.078431372549019607" blue="0.20784313725490197" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="MineShaft">
-            <color red="0.17299999296665192" green="0.17299999296665192" blue="0.17299999296665192" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="PictonBlue">
-            <color red="0.2196078431372549" green="0.59607843137254901" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="Tundora">
-            <color red="0.25882352941176473" green="0.25882352941176473" blue="0.25882352941176473" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="tbu-MO-Uc9"/>
         <segue reference="hgr-06-sNC"/>
     </inferredMetricsTieBreakers>
 </document>
